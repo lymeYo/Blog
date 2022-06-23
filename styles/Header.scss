@@ -1,0 +1,28 @@
+.header {
+   background-color: #faf;
+   color: #000;
+
+   .search-area {
+      &-wrapper{
+         width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+      }
+      .input {
+         color: #fff;
+      }
+      // border: 2px solid #000;
+      width: 500px;
+   }
+
+   .drawer {
+      .list {
+         border: 2px solid #000;
+         &-item {
+            padding: 0 50px;
+            border: 2px solid #000;
+         }
+      }
+   }
+}
