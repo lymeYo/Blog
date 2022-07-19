@@ -1,6 +1,7 @@
 .header {
    background-color: #faf;
    color: #000;
+   position: relative;
 
    .search-area {
       &-wrapper{
@@ -14,6 +15,45 @@
       }
       // border: 2px solid #000;
       width: 500px;
+   }
+
+   .nav-area {
+      display: flex;
+      justify-content: space-between;
+      width: 300px;
+
+      .create-button {
+            background-color: #fff;
+            border-radius: 10px;
+            color: #000;
+            cursor: pointer;
+            &:hover {
+               box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            }
+            &:active {
+               position: relative;
+               top: 1px;
+            }
+      
+            .body {
+               padding: 7px 10px 7px 7px;
+               width: 110px;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+      
+               .icon {}
+      
+               .text {
+                  position: relative;
+                  bottom: 2px;
+               }
+            }
+         }
+
+         .login-area {
+
+         }
    }
 
    .drawer {

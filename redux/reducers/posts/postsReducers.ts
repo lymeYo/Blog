@@ -12,7 +12,7 @@ let initialState: initialStateInterface = {
 
 const postsReducer = produce((draft: Draft<initialStateInterface>, action: actionInterface) => {
    switch (action.type) {
-
+         
    }
 
    return draft

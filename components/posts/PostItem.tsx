@@ -1,7 +1,12 @@
 import Router from "next/router"
 import AddIcon from '@mui/icons-material/Add';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import IosShareIcon from '@mui/icons-material/IosShare';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import { Button, IconButton } from "@mui/material";
+import PostComments from "./PostComments";
+import StatisticsButtons from "../universal/StatisticsButtons";
 
 
 function InfoButtons(props: any) {
@@ -41,11 +46,32 @@ function PostBody(props: any) {
    )
 }
 
-function PostButtons(props: any) {
+function ButtonsRow(props: any) {
 
    return (
+      <div className="row">
+         <div className="row-comments"><IconButton><ChatBubbleOutlineIcon /></IconButton></div>
+         <div className="row-share"><IconButton><IosShareIcon /></IconButton></div>
+         <div className="row-bookmark"><IconButton><BookmarkBorderIcon /></IconButton></div>
+      </div>
+   )
+}
+
+function PostButtons(props: any) {
+   const upClickFunction = () => {
+      console.log('upClickFunction')
+      
+   }
+   const downClickFunction = () => {
+      console.log('downClickFunction')
+      
+   }
+   
+   
+   return (
       <div className="buttons">
-         тут кнопки
+         <ButtonsRow />
+         <StatisticsButtons downClick={downClickFunction} upClick={upClickFunction} />
       </div>
    )
 }
@@ -71,8 +97,9 @@ export default function PostItem(props: any) {
       <div className="post-item">
          <PostInfo />
          <PostBody openPost={openPost} />
-         <PostButtons />
          {isFullPost ? <PostContent />: ''}
+         <PostButtons />
+         {isFullPost ? <PostComments />: ''}
       </div>
    )
    

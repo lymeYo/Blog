@@ -1,3 +1,6 @@
+//@ts-nocheck
+//!ругается на color='header в параметрах AppBar
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,14 +10,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { TextField } from '@mui/material';
 import SearchArea from './SearchArea';
+import CreateButton from './CreateButton';
 import React from 'react';
-
+import NavArea from './NavArea';
 function Appbar(props: any) {
    const renderDrawerOpen = props.renderDrawerOpen
    
   return (
      <Box sx={{ flexGrow: 1 }}>
-        <AppBar color='header' position="static">
+        <AppBar color='header' position="fixed">
            <Toolbar>
               <IconButton
                  size="large"
@@ -31,8 +35,9 @@ function Appbar(props: any) {
               </Typography>
 
               <SearchArea />
+
+              <NavArea />
               
-              <Button color="inherit">Login</Button>
            </Toolbar>
         </AppBar>
      </Box>

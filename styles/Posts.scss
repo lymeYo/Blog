@@ -1,5 +1,4 @@
 .posts {
-   // border: 2px solid #000;
    display: grid;
    grid-template-columns: 4fr 1fr;
 
@@ -13,7 +12,6 @@
    }
 
    .comments {
-      border: 2px solid #000;
    }
 }
 
@@ -96,5 +94,86 @@
 
    .content {
       line-height: 25px;
+   }
+
+   .buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 0 0 0;
+      .row {
+         align-items: center;
+         display: flex;
+         &-comments {
+
+         }
+         &-share {
+            position: relative;
+            svg {
+               position: relative;
+               bottom: 3px;
+            }
+         }
+         &-bookmark {
+
+         }
+      }
+   }
+
+   .comments {
+      .add-comment-area {
+         background-color: rgb(235, 235, 235);
+         .add-comment-buttons {
+            display: flex;
+            justify-content: space-between;
+         }
+         input {
+            background-color: rgb(235, 235, 235);
+            padding: 5px;
+            border: 1px solid $grayClr;
+            border-radius: 10px;
+            font-size: 20px;
+            width: 100%;
+            border: none;
+            outline: none;
+         }
+      }
+
+      &-list {
+         .comment {
+            padding: 15px 0;
+            
+            &-info {
+               display: flex;
+               
+               .comment-avatar {}
+               .comment-profile {
+                  flex-grow: 1;
+                  padding: 0 10px;
+                  
+                  .comment-name {
+                     font-weight: 500;
+                  }
+                  .comment-time {
+                     font-size: 13px;
+                     color: $grayClr;
+                  }
+               }
+            }
+            &-text {
+               flex-grow: 1;
+               padding: 10px 0;
+            }
+            &-buttons {
+               display: flex;
+               align-items: center;
+               font-size: 14px;
+               color: $grayClr;
+
+               div + div {
+                  margin-left: 15px;
+               }
+            }
+         }
+      }
    }
 }

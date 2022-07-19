@@ -1,0 +1,10 @@
+.universal-component {
+   &.statistics-buttons {
+         display: flex;
+         align-items: center;
+   
+         .statistics-buttons-counter {
+            color: $greenValid;
+         }
+      }
+}
